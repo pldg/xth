@@ -1,5 +1,8 @@
 # XTH
 
+![size-badge](https://img.shields.io/github/size/pldg/xth/xth.min.js.svg)
+![downloads-badge](https://img.shields.io/npm/dt/xth.svg)
+
 **Xml-To-Html**
 
 - Load an XML file
