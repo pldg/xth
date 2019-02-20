@@ -1,3 +1,4 @@
+const title = document.getElementById('title');
 const inputXml = document.getElementById('select-xml');
 const inputXsl = document.getElementById('select-xsl');
 const selectedXml = document.getElementById('selected-xml');
@@ -41,7 +42,7 @@ function handleConversion() {
     if (warning !== null) warning.parentNode.removeChild(warning);
   } catch (error) {
     if (warning === null) {
-      document.body.insertAdjacentHTML('afterbegin', warningMessage);
+      title.insertAdjacentHTML('afterend', warningMessage);
     }
   }
 

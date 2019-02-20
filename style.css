@@ -3,10 +3,13 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body > * {
+  margin-left: 1rem;
+}
+
 #warning,
 label,
 #convert {
-  margin-left: 1rem;
   margin-top: 1rem;
 }
 
@@ -51,7 +54,7 @@ button:hover {
 iframe {
   display: block;
   height: 50vh;
-  width: 98%;
+  width: 97.5%;
   margin: 2rem auto;
   border: 2px dotted #ccc;
 }
