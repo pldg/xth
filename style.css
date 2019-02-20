@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+#warning,
+label,
+#convert {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+#warning {
+  color: brown;
+  margin-bottom: 0;
+}
+
+label {
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 0.3em;
+  padding: 0.4em;
+}
+
+label:hover {
+  background: lightskyblue;
+  border-color: lightskyblue;
+}
+
+input {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  padding: 0.4em;
+  border-radius: 0.3em;
+}
+
+button:hover {
+  background: lightskyblue;
+  border-color: lightskyblue;
+}
+
+#write-to-page {
+  margin-left: 1rem;
+}
+
+iframe {
+  display: block;
+  height: 50vh;
+  width: 98%;
+  margin: 2rem auto;
+  border: 2px dotted #ccc;
+}

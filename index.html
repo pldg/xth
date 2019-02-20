@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transform XML/XLS to HTML</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="select">
+    <label>
+      <span>Select XML File</span>
+      <input id="select-xml" required type="file" accept=".xml">
+    </label>
+    <span id="selected-xml"></span>
+  </div>
+
+  <div class="select">
+    <label>
+      <span>Select XSL File</span>
+      <input id="select-xsl" required type="file" accept=".xsl">
+    </label>
+    <span id="selected-xsl"></span>
+  </div>
+
+  <div id="convert">
+    <button id="preview-to-iframe">Preview HTML</button>
+    <button id="write-to-page">Write HTML to page</button>
+  </div>
+
+  <iframe sandbox src='about:blank'></iframe>
+
+  <script src="./xth.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
