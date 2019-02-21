@@ -5,17 +5,25 @@
 
 ## Xml To Html
 
-Load an XML file and its associated XSLT stylesheet to transform them to HTML. This script has no dependencies and works in IE10.
+Load an XML file and its associated XSLT stylesheet to transform them to HTML.
+
+This script has no dependencies and works in IE10.
 
 ## Install
 
-`npm install --save xth` or use a cdn [unpkg/xth](https://unpkg.com/xth/xth.min.js).
+### Use with nodejs
+
+`npm install --save xth`
+
+### Use with a cdn
+
+```js
+<script src="https://unpkg.com/xth/xth.min.js"></script>
+```
 
 ## Example
 
 ```js
-var xth = require('xth');
-
 var xml = 'path/to/xml';
 var xsl = 'path/to/xsl';
 
@@ -26,11 +34,12 @@ xth(xml, xsl, function(html) {
 
 ## Try online
 
-Go to [pldg.github.io/xth](https://pldg.github.io/xth/) for testing. See the source code in [gh-pages branch](/pldg/xth/tree/gh-pages/).
+Go to [pldg.github.io/xth](https://pldg.github.io/xth/) (the source code is in [gh-pages](https://github.com/pldg/xth/tree/gh-pages) branch).
 
 ## Test locally
 
-`npm run test` and open `http://127.0.0.1:8080/test/`.
+1. Execute `npm run test`
+2. Open `http://127.0.0.1:8080/test/`
 
 ## API
 
@@ -53,4 +62,4 @@ Path to XSLT file.
 *Required* <br>
 *Type:* `Function`
 
-`callback(html)` takes one argument, the parsed HTML.
+`callback(html)` takes the parsed HTML as argument.
