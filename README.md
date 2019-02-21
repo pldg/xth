@@ -17,7 +17,7 @@ This script has no dependencies and works in IE10.
 
 ### Use with a cdn
 
-```js
+```html
 <script src="https://unpkg.com/xth/xth.min.js"></script>
 ```
 
