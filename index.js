@@ -1,7 +1,11 @@
-/*! MIT (c) Luca Poldelmengo | https://github.com/pldg/xth */
+/**
+ * @license MIT
+ * @author Luca Poldelmengo
+ * @version 1.1.0
+ * @see {@link https://github.com/pldg/xth}
+ */
 
 /**
- * Xml-To-Html
  * Transform XML/XSLT to HTML
  * Compatible with IE 10+
  * @param {String} xmlPath Path to XML file
@@ -9,10 +13,32 @@
  * @param {Function} callback Handle transformed HTML
  */
 function xth(xmlPath, xslPath, callback) {
+  var isNonEmptyString = function (val) {
+    return typeof val === 'string' && val.length > 0;
+  }
+
+  if (xmlPath === undefined) {
+    throw new Error('"xmlPath" is required');
+  } else if (!isNonEmptyString(xmlPath)) {
+    throw new Error('"xmlPath" must be a non-empty string');
+  }
+
+  if (xslPath === undefined) {
+    throw new Error('"xslPath" is required');
+  } else if (!isNonEmptyString(xslPath)) {
+    throw new Error('"xmlPath" must be a non-empty string');
+  }
+
+  if (callback === undefined) {
+    throw new Error('"callback" is required');
+  } else if (typeof callback !== 'function') {
+    throw new Error('"callback" must be typeof function');
+  }
+
   var isIE = detectIE();
 
-  loadDocument(xmlPath, function(xml) {
-    loadDocument(xslPath, function(xsl) {
+  loadDocument(xmlPath, function (xml) {
+    loadDocument(xslPath, function (xsl) {
       var html = '<!DOCTYPE html>' + transformXml(xml, xsl);
       callback(html);
     });
@@ -53,18 +79,24 @@ function xth(xmlPath, xslPath, callback) {
     else xhr = new XMLHttpRequest();
 
     if (!xhr) {
-      throw 'ERROR: No AJAX support';
+      throw new Error('No AJAX support');
     } else {
       xhr.open('GET', filepath);
+
       if (!isIE) xhr.responseType = 'document';
+
       xhr.send();
-      xhr.onreadystatechange = function() {
+
+      xhr.onreadystatechange = function () {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
-            if (isIE) callback(xhr.responseXML);
-            else callback(xhr.response);
+            if (isIE) {
+              callback(xhr.responseXML);
+            } else {
+              callback(xhr.response);
+            }
           } else {
-            throw 'ERROR: Could not load: ' + filepath;
+            throw new Error('Could not load: ' + filepath);
           }
         }
       }
@@ -74,15 +106,17 @@ function xth(xmlPath, xslPath, callback) {
   /**
    * Detect Internet Explorer
    * @returns {True|False} If it's IE return `true` otherwise return `false`
-   * {@link https://stackoverflow.com/a/21712356/}
+   * @see {@link https://stackoverflow.com/a/21712356/}
    */
   function detectIE() {
     var ua = window.navigator.userAgent;
     var msie = ua.indexOf('MSIE ');
     var trident = ua.indexOf('Trident/');
+
     if (msie > 0 || trident > 0) {
       return true;
     }
+
     return false;
   }
 }
