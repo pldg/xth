@@ -1,6 +1,6 @@
 {
   "name": "xth",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Transform XML/XSLT to HTML",
   "browser": "index.js",
   "scripts": {
