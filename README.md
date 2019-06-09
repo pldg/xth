@@ -3,23 +3,23 @@
 ![size-badge](https://img.shields.io/github/size/pldg/xth/xth.min.js.svg)
 ![downloads-badge](https://img.shields.io/npm/dt/xth.svg)
 
-## Xml To Html
+With *xth* (xml to html) you can load an XML file and its associated XSLT stylesheet and transform them to HTML.
 
-Load an XML file and its associated XSLT stylesheet to transform them to HTML.
+No dependencies, weight only 1.3kb.
 
-This script has no dependencies and works in IE10.
+Works client-side in all major browsers including Internet Explorer 10 and newer versions.
 
 ## Install
 
-### Use with nodejs
-
-`npm install --save xth`
-
-### Use with a cdn
+### CDN
 
 ```html
 <script src="https://unpkg.com/xth/xth.min.js"></script>
 ```
+
+### NPM
+
+`npm install --save xth`
 
 ## Example
 
@@ -34,7 +34,7 @@ xth(xml, xsl, function(html) {
 
 ## Try online
 
-Go to [pldg.github.io/xth](https://pldg.github.io/xth/) (the source code is in [gh-pages](https://github.com/pldg/xth/tree/gh-pages) branch).
+Go to [pldg.github.io/xth](https://pldg.github.io/xth/) (the source code is in gh-pages branch).
 
 ## Test locally
 

@@ -2,7 +2,7 @@
   "name": "xth",
   "version": "1.1.0",
   "description": "Transform XML/XSLT to HTML",
-  "main": "index.js",
+  "browser": "index.js",
   "scripts": {
     "test": "live-server --no-browser",
     "minify": "uglifyjs index.js --output xth.min.js --comments --compress --mangle"
