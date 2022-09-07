@@ -4,7 +4,6 @@
   "description": "Transform XML/XSLT to HTML",
   "browser": "index.js",
   "scripts": {
-    "test": "live-server --no-browser",
     "minify": "uglifyjs index.js --output xth.min.js --comments --compress --mangle"
   },
   "keywords": [
@@ -30,7 +29,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "live-server": "^1.2.1",
-    "uglify-js": "^3.4.9"
+    "uglify-js": "^3.17.0"
   }
 }

@@ -38,8 +38,8 @@ Go to [pldg.github.io/xth](https://pldg.github.io/xth/) (the source code is in g
 
 ## Test locally
 
-1. Execute `npm run test`
-2. Open `http://127.0.0.1:8080/test/`
+1. Execute `python3 -m http.server`
+2. Open `http://localhost:8000/test/`
 
 ## API
 
